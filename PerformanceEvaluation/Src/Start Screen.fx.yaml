@@ -174,35 +174,6 @@
             Y: =51
             ZIndex: =8
 
-        goDetail As button:
-            BorderColor: =RGBA(0, 0, 0, 0)
-            BorderStyle: =BorderStyle.None
-            BorderThickness: =1
-            DisabledBorderColor: =RGBA(0, 0, 0, 0)
-            DisabledColor: =RGBA(166, 166, 166, 1)
-            DisabledFill: =RGBA(244, 244, 244, 1)
-            Fill: =RGBA(122, 171, 159, 1)
-            FocusedBorderThickness: =1
-            Font: =Font.'Segoe UI'
-            FontWeight: =FontWeight.Semibold
-            HoverBorderColor: =RGBA(0, 0, 0, 0)
-            HoverColor: =RGBA(255, 255, 255, 1)
-            HoverFill: =ColorFade(RGBA(45,37,37, 1), -10%)
-            OnSelect: |-
-                =Navigate(Details,ScreenTransition.Fade, {rowId: ThisItem.ID})
-            PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
-            PressedColor: =RGBA(255, 255, 255, 1)
-            PressedFill: =ColorFade(RGBA(45,37,37, 1), -30%)
-            RadiusBottomLeft: =0
-            RadiusBottomRight: =0
-            RadiusTopLeft: =0
-            RadiusTopRight: =0
-            Size: =10.5
-            Text: ="Go"
-            Width: =61
-            X: =909
-            ZIndex: =9
-
         Rectangle1 As rectangle:
             BorderColor: =RGBA(0, 0, 0, 0)
             BorderStyle: =BorderStyle.None
@@ -218,19 +189,410 @@
             X: =60
             ZIndex: =10
 
+        Go As Button:
+            DisplayMode: =DisplayMode.Edit
+            Height: =40
+            OnSelect: |-
+                =Navigate(Details,ScreenTransition.Fade, {rowId: ThisItem.ID})
+            Text: ="Go"
+            Width: =61
+            X: =909
+            Y: =0
+            ZIndex: =11
+
+    Headers As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =29
+
+        badge As button:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =1
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            Fill: =RGBA(40, 112, 134, 1)
+            FocusedBorderThickness: =1
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Semibold
+            Height: =50
+            HoverBorderColor: =RGBA(0, 0, 0, 0)
+            HoverColor: =RGBA(255, 255, 255, 1)
+            HoverFill: =ColorFade(RGBA(122, 171, 159, 1), -10%)
+            PressedBorderColor: =ColorFade(RGBA(122, 171, 159, 1), -50%)
+            PressedColor: =RGBA(255, 255, 255, 1)
+            PressedFill: =ColorFade(RGBA(122, 171, 159, 1), -30%)
+            RadiusBottomLeft: =0
+            RadiusBottomRight: =0
+            RadiusTopLeft: =0
+            RadiusTopRight: =0
+            Size: =10.5
+            Text: ="Badge"
+            Width: =65
+            X: =190
+            Y: =101
+            ZIndex: =6
+
+        employee_name As button:
+            Align: =Align.Left
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =1
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            Fill: =RGBA(40, 112, 134, 1)
+            FocusedBorderThickness: =1
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Semibold
+            Height: =50
+            HoverBorderColor: =RGBA(0, 0, 0, 0)
+            HoverColor: =RGBA(255, 255, 255, 1)
+            HoverFill: =ColorFade(RGBA(122, 171, 159, 1), -10%)
+            OnSelect: =Set(EmployeeNameSort, If(EmployeeNameSort = "up", "down", "up"))
+            PressedBorderColor: =ColorFade(RGBA(122, 171, 159, 1), -50%)
+            PressedColor: =RGBA(255, 255, 255, 1)
+            PressedFill: =ColorFade(RGBA(122, 171, 159, 1), -30%)
+            RadiusBottomLeft: =0
+            RadiusBottomRight: =0
+            RadiusTopLeft: =0
+            RadiusTopRight: =0
+            Size: =10.5
+            Text: ="Employee Name"
+            Width: =140
+            X: =260
+            Y: =101
+            ZIndex: =7
+
+        project As button:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =1
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            Fill: =RGBA(40, 112, 134, 1)
+            FocusedBorderThickness: =1
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Semibold
+            Height: =50
+            HoverBorderColor: =RGBA(0, 0, 0, 0)
+            HoverColor: =RGBA(255, 255, 255, 1)
+            HoverFill: =ColorFade(RGBA(122, 171, 159, 1), -10%)
+            PressedBorderColor: =ColorFade(RGBA(122, 171, 159, 1), -50%)
+            PressedColor: =RGBA(255, 255, 255, 1)
+            PressedFill: =ColorFade(RGBA(122, 171, 159, 1), -30%)
+            RadiusBottomLeft: =0
+            RadiusBottomRight: =0
+            RadiusTopLeft: =0
+            RadiusTopRight: =0
+            Size: =10.5
+            Text: ="Project"
+            Width: =100
+            X: =405
+            Y: =101
+            ZIndex: =8
+
+        business_unit As button:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =1
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            Fill: =RGBA(40, 112, 134, 1)
+            FocusedBorderThickness: =1
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Semibold
+            Height: =50
+            HoverBorderColor: =RGBA(0, 0, 0, 0)
+            HoverColor: =RGBA(255, 255, 255, 1)
+            HoverFill: =ColorFade(RGBA(122, 171, 159, 1), -10%)
+            PressedBorderColor: =ColorFade(RGBA(122, 171, 159, 1), -50%)
+            PressedColor: =RGBA(255, 255, 255, 1)
+            PressedFill: =ColorFade(RGBA(122, 171, 159, 1), -30%)
+            RadiusBottomLeft: =0
+            RadiusBottomRight: =0
+            RadiusTopLeft: =0
+            RadiusTopRight: =0
+            Size: =10.5
+            Text: ="Business Unit"
+            Width: =85
+            X: =510
+            Y: =101
+            ZIndex: =9
+
+        position As button:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =1
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            Fill: =RGBA(40, 112, 134, 1)
+            FocusedBorderThickness: =1
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Semibold
+            Height: =50
+            HoverBorderColor: =RGBA(0, 0, 0, 0)
+            HoverColor: =RGBA(255, 255, 255, 1)
+            HoverFill: =ColorFade(RGBA(122, 171, 159, 1), -10%)
+            PressedBorderColor: =ColorFade(RGBA(122, 171, 159, 1), -50%)
+            PressedColor: =RGBA(255, 255, 255, 1)
+            PressedFill: =ColorFade(RGBA(122, 171, 159, 1), -30%)
+            RadiusBottomLeft: =0
+            RadiusBottomRight: =0
+            RadiusTopLeft: =0
+            RadiusTopRight: =0
+            Size: =10.5
+            Text: ="Position"
+            Width: =145
+            X: =600
+            Y: =101
+            ZIndex: =10
+
+        department As button:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =1
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            Fill: =RGBA(40, 112, 134, 1)
+            FocusedBorderThickness: =1
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Semibold
+            Height: =50
+            HoverBorderColor: =RGBA(0, 0, 0, 0)
+            HoverColor: =RGBA(255, 255, 255, 1)
+            HoverFill: =ColorFade(RGBA(122, 171, 159, 1), -10%)
+            PressedBorderColor: =ColorFade(RGBA(122, 171, 159, 1), -50%)
+            PressedColor: =RGBA(255, 255, 255, 1)
+            PressedFill: =ColorFade(RGBA(122, 171, 159, 1), -30%)
+            RadiusBottomLeft: =0
+            RadiusBottomRight: =0
+            RadiusTopLeft: =0
+            RadiusTopRight: =0
+            Size: =10.5
+            Text: ="Department"
+            Width: =205
+            X: =756
+            Y: =101
+            ZIndex: =11
+
+        start_date As button:
+            Align: =Align.Left
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =1
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            Fill: =RGBA(40, 112, 134, 1)
+            FocusedBorderThickness: =1
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Semibold
+            Height: =50
+            HoverBorderColor: =RGBA(0, 0, 0, 0)
+            HoverColor: =RGBA(255, 255, 255, 1)
+            HoverFill: =ColorFade(RGBA(122, 171, 159, 1), -10%)
+            OnSelect: =Set(StartDateSort, If(StartDateSort = "up", "down", "up"))
+            PressedBorderColor: =ColorFade(RGBA(122, 171, 159, 1), -50%)
+            PressedColor: =RGBA(255, 255, 255, 1)
+            PressedFill: =ColorFade(RGBA(122, 171, 159, 1), -30%)
+            RadiusBottomLeft: =0
+            RadiusBottomRight: =0
+            RadiusTopLeft: =0
+            RadiusTopRight: =0
+            Size: =10.5
+            Text: ="Start Date"
+            Width: =130
+            X: =968
+            Y: =101
+            ZIndex: =12
+
+        Actions As button:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =1
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            Fill: =RGBA(40, 112, 134, 1)
+            FocusedBorderThickness: =1
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Semibold
+            Height: =50
+            HoverBorderColor: =RGBA(0, 0, 0, 0)
+            HoverColor: =RGBA(255, 255, 255, 1)
+            HoverFill: =ColorFade(RGBA(122, 171, 159, 1), -10%)
+            PressedBorderColor: =ColorFade(RGBA(122, 171, 159, 1), -50%)
+            PressedColor: =RGBA(255, 255, 255, 1)
+            PressedFill: =ColorFade(RGBA(122, 171, 159, 1), -30%)
+            RadiusBottomLeft: =0
+            RadiusBottomRight: =0
+            RadiusTopLeft: =0
+            RadiusTopRight: =0
+            Size: =10.5
+            Text: ="Action"
+            Width: =55
+            X: =1109
+            Y: =101
+            ZIndex: =14
+
+        StartDateUp As icon.ChevronUp:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderThickness: =1
+            Color: =RGBA(255, 255, 255, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(220, 220, 220, 1)
+            DisabledFill: =RGBA(0, 0, 0, 0)
+            FocusedBorderThickness: =1
+            Height: =20
+            HoverBorderColor: =RGBA(0, 0, 0, 0)
+            HoverColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+            HoverFill: =RGBA(0, 0, 0, 0)
+            Icon: =Icon.ChevronUp
+            PressedBorderColor: =RGBA(0, 0, 0, 0)
+            PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+            PressedFill: =RGBA(0, 0, 0, 0)
+            Visible: =If(StartDateSort = "up", true, false)
+            Width: =20
+            X: =1065
+            Y: =117
+            ZIndex: =16
+
+        StartDateDown As icon.ChevronDown:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderThickness: =1
+            Color: =RGBA(255, 255, 255, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(220, 220, 220, 1)
+            DisabledFill: =RGBA(0, 0, 0, 0)
+            FocusedBorderThickness: =1
+            Height: =20
+            HoverBorderColor: =RGBA(0, 0, 0, 0)
+            HoverColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+            HoverFill: =RGBA(0, 0, 0, 0)
+            Icon: =Icon.ChevronDown
+            PressedBorderColor: =RGBA(0, 0, 0, 0)
+            PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+            PressedFill: =RGBA(0, 0, 0, 0)
+            Visible: =If(StartDateSort = "down", true, false)
+            Width: =20
+            X: =1065
+            Y: =117
+            ZIndex: =17
+
+    FilterPanel As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =40
+
+        SeperatorLiner As rectangle:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =1
+            DisabledFill: =RGBA(166, 166, 166, 1)
+            Fill: =RGBA(122, 171, 159, 1)
+            FocusedBorderThickness: =1
+            Height: =2
+            HoverFill: =RGBA(0, 120, 212, 1)
+            OnSelect: =
+            PressedFill: =RGBA(0, 120, 212, 1)
+            Width: =983
+            X: =196
+            Y: =85
+            ZIndex: =13
+
+        SelectProject As Combobox.pcfdataset:
+            DisplayMode: =DisplayMode.Edit
+            Height: =35
+            InputTextPlaceholder: ="Select Project"
+            IsSearchable: =true
+            Items: =Sort( Distinct( Data, project ), Value )
+            SelectMultiple: =true
+            Width: =200
+            X: =500
+            Y: =20
+            ZIndex: =31
+
+            Value2 As pcfDataField.textualColumn:
+                FieldDisplayName: ="Value"
+                FieldName: ="Value"
+                FieldType: ="s"
+                FieldVariantName: ="textualColumn"
+                Order: =1
+                ZIndex: =24
+
+        SelectPosition As Combobox.pcfdataset:
+            DisplayMode: =DisplayMode.Edit
+            Height: =35
+            InputTextPlaceholder: ="Select Position"
+            IsSearchable: =true
+            Items: =Sort( Distinct( Data, Position ), Value )
+            SelectMultiple: =true
+            Width: =200
+            X: =960
+            Y: =20
+            ZIndex: =36
+
+            Value1 As pcfDataField.textualColumn:
+                FieldDisplayName: ="Value"
+                FieldName: ="Value"
+                FieldType: ="s"
+                FieldVariantName: ="textualColumn"
+                Order: =1
+                ZIndex: =23
+
+        SelectDepartment As Combobox.pcfdataset:
+            DisplayMode: =DisplayMode.Edit
+            Height: =35
+            InputTextPlaceholder: ="Select Department"
+            IsSearchable: =true
+            Items: =Sort( Distinct( Data, Department ), Value )
+            SelectMultiple: =true
+            Width: =200
+            X: =733
+            Y: =20
+            ZIndex: =37
+
+            Value3 As pcfDataField.textualColumn:
+                FieldDisplayName: ="Value"
+                FieldName: ="Value"
+                FieldType: ="e"
+                FieldVariantName: ="textualColumn"
+                Order: =1
+                ZIndex: =25
+
+        "SearchEmployee As 'Text input'":
+            DisplayMode: =DisplayMode.Edit
+            Height: =35
+            Placeholder: ="Search Employee"
+            Type: =""
+            Width: =290
+            X: =200
+            Y: =20
+            ZIndex: =39
+
     LeftPanel As group:
         Height: =5
         Width: =5
         X: =40
         Y: =40
-        ZIndex: =6
+        ZIndex: =40
 
         LeftPanelShape As rectangle:
             BorderColor: =RGBA(0, 0, 0, 0)
             BorderStyle: =BorderStyle.None
             BorderThickness: =1
             DisabledFill: =RGBA(122, 171, 159, 1)
-            Fill: =RGBA(122, 171, 159, 1)
+            Fill: =RGBA(40, 112, 134, 1)
             FocusedBorderThickness: =1
             Height: =790
             HoverFill: =RGBA(122, 171, 159, 1)
@@ -298,463 +660,90 @@
             Y: =161
             ZIndex: =5
 
-    SeperatorLiner As rectangle:
-        BorderColor: =RGBA(0, 0, 0, 0)
-        BorderStyle: =BorderStyle.None
-        BorderThickness: =1
-        DisabledFill: =RGBA(166, 166, 166, 1)
-        Fill: =RGBA(122, 171, 159, 1)
-        FocusedBorderThickness: =1
-        Height: =2
-        HoverFill: =RGBA(0, 120, 212, 1)
-        OnSelect: =
-        PressedFill: =RGBA(0, 120, 212, 1)
-        Width: =983
-        X: =196
-        Y: =85
-        ZIndex: =13
-
-    Button3 As button:
-        BorderColor: =RGBA(0, 0, 0, 0)
-        BorderStyle: =BorderStyle.None
-        BorderThickness: =1
-        DisabledBorderColor: =RGBA(0, 0, 0, 0)
-        DisabledColor: =RGBA(166, 166, 166, 1)
-        DisabledFill: =RGBA(0, 0, 0, 1)
-        Fill: =RGBA(73, 102, 95, 1)
-        FocusedBorderThickness: =1
-        Font: =Font.'Segoe UI'
-        FontWeight: =FontWeight.Semibold
-        Height: =56
-        HoverBorderColor: =RGBA(0, 0, 0, 0)
-        HoverColor: =RGBA(255, 255, 255, 1)
-        HoverFill: =ColorFade(RGBA(73,102,95, 1), -10%)
-        PressedBorderColor: =ColorFade(RGBA(73,102,95, 1), -50%)
-        PressedColor: =RGBA(255, 255, 255, 1)
-        PressedFill: =ColorFade(RGBA(73,102,95, 1), -30%)
-        RadiusBottomLeft: =0
-        RadiusBottomRight: =0
-        RadiusTopLeft: =0
-        RadiusTopRight: =0
-        Size: =10.5
-        Text: ="Admin Panel"
-        Width: =136
-        X: =23
-        Y: =466
-        ZIndex: =27
-
-    Button3_1 As button:
-        BorderColor: =RGBA(0, 0, 0, 0)
-        BorderStyle: =BorderStyle.None
-        BorderThickness: =1
-        DisabledBorderColor: =RGBA(0, 0, 0, 0)
-        DisabledColor: =RGBA(166, 166, 166, 1)
-        DisabledFill: =RGBA(0, 0, 0, 1)
-        Fill: =RGBA(73, 102, 95, 1)
-        FocusedBorderThickness: =1
-        Font: =Font.'Segoe UI'
-        FontWeight: =FontWeight.Semibold
-        Height: =45
-        HoverBorderColor: =RGBA(0, 0, 0, 0)
-        HoverColor: =RGBA(255, 255, 255, 1)
-        HoverFill: =ColorFade(RGBA(73,102,95, 1), -10%)
-        PressedBorderColor: =ColorFade(RGBA(73,102,95, 1), -50%)
-        PressedColor: =RGBA(255, 255, 255, 1)
-        PressedFill: =ColorFade(RGBA(73,102,95, 1), -30%)
-        RadiusBottomLeft: =0
-        RadiusBottomRight: =0
-        RadiusTopLeft: =0
-        RadiusTopRight: =0
-        Size: =10.5
-        Text: ="Settings"
-        Width: =136
-        X: =23
-        Y: =400
-        ZIndex: =28
-
-    Button3_2 As button:
-        BorderColor: =RGBA(0, 0, 0, 0)
-        BorderStyle: =BorderStyle.None
-        BorderThickness: =1
-        DisabledBorderColor: =RGBA(0, 0, 0, 0)
-        DisabledColor: =RGBA(166, 166, 166, 1)
-        DisabledFill: =RGBA(0, 0, 0, 1)
-        Fill: =RGBA(73, 102, 95, 1)
-        FocusedBorderThickness: =1
-        Font: =Font.'Segoe UI'
-        FontWeight: =FontWeight.Semibold
-        Height: =45
-        HoverBorderColor: =RGBA(0, 0, 0, 0)
-        HoverColor: =RGBA(255, 255, 255, 1)
-        HoverFill: =ColorFade(RGBA(73,102,95, 1), -10%)
-        PressedBorderColor: =ColorFade(RGBA(73,102,95, 1), -50%)
-        PressedColor: =RGBA(255, 255, 255, 1)
-        PressedFill: =ColorFade(RGBA(73,102,95, 1), -30%)
-        RadiusBottomLeft: =0
-        RadiusBottomRight: =0
-        RadiusTopLeft: =0
-        RadiusTopRight: =0
-        Size: =10.5
-        Text: ="Dashboard"
-        Width: =136
-        X: =23
-        Y: =335
-        ZIndex: =29
-
-    Headers As group:
-        Height: =5
-        Width: =5
-        X: =40
-        Y: =40
-        ZIndex: =29
-
-        badge As button:
+        Button3 As button:
             BorderColor: =RGBA(0, 0, 0, 0)
             BorderStyle: =BorderStyle.None
             BorderThickness: =1
             DisabledBorderColor: =RGBA(0, 0, 0, 0)
             DisabledColor: =RGBA(166, 166, 166, 1)
-            DisabledFill: =RGBA(244, 244, 244, 1)
-            Fill: =RGBA(122, 171, 159, 1)
+            DisabledFill: =RGBA(0, 0, 0, 1)
+            Fill: =RGBA(73, 102, 95, 1)
             FocusedBorderThickness: =1
             Font: =Font.'Segoe UI'
             FontWeight: =FontWeight.Semibold
-            Height: =50
+            Height: =56
             HoverBorderColor: =RGBA(0, 0, 0, 0)
             HoverColor: =RGBA(255, 255, 255, 1)
-            HoverFill: =ColorFade(RGBA(122, 171, 159, 1), -10%)
-            PressedBorderColor: =ColorFade(RGBA(122, 171, 159, 1), -50%)
+            HoverFill: =ColorFade(RGBA(73,102,95, 1), -10%)
+            PressedBorderColor: =ColorFade(RGBA(73,102,95, 1), -50%)
             PressedColor: =RGBA(255, 255, 255, 1)
-            PressedFill: =ColorFade(RGBA(122, 171, 159, 1), -30%)
+            PressedFill: =ColorFade(RGBA(73,102,95, 1), -30%)
             RadiusBottomLeft: =0
             RadiusBottomRight: =0
             RadiusTopLeft: =0
             RadiusTopRight: =0
             Size: =10.5
-            Text: ="Badge"
-            Width: =65
-            X: =190
-            Y: =101
-            ZIndex: =6
+            Text: ="Admin Panel"
+            Width: =136
+            X: =23
+            Y: =466
+            ZIndex: =27
 
-        employee_name As button:
-            Align: =Align.Left
+        Button3_1 As button:
             BorderColor: =RGBA(0, 0, 0, 0)
             BorderStyle: =BorderStyle.None
             BorderThickness: =1
             DisabledBorderColor: =RGBA(0, 0, 0, 0)
             DisabledColor: =RGBA(166, 166, 166, 1)
-            DisabledFill: =RGBA(244, 244, 244, 1)
-            Fill: =RGBA(122, 171, 159, 1)
+            DisabledFill: =RGBA(0, 0, 0, 1)
+            Fill: =RGBA(73, 102, 95, 1)
             FocusedBorderThickness: =1
             Font: =Font.'Segoe UI'
             FontWeight: =FontWeight.Semibold
-            Height: =50
+            Height: =45
             HoverBorderColor: =RGBA(0, 0, 0, 0)
             HoverColor: =RGBA(255, 255, 255, 1)
-            HoverFill: =ColorFade(RGBA(122, 171, 159, 1), -10%)
-            OnSelect: =Set(EmployeeNameSort, If(EmployeeNameSort = "up", "down", "up"))
-            PressedBorderColor: =ColorFade(RGBA(122, 171, 159, 1), -50%)
+            HoverFill: =ColorFade(RGBA(73,102,95, 1), -10%)
+            PressedBorderColor: =ColorFade(RGBA(73,102,95, 1), -50%)
             PressedColor: =RGBA(255, 255, 255, 1)
-            PressedFill: =ColorFade(RGBA(122, 171, 159, 1), -30%)
+            PressedFill: =ColorFade(RGBA(73,102,95, 1), -30%)
             RadiusBottomLeft: =0
             RadiusBottomRight: =0
             RadiusTopLeft: =0
             RadiusTopRight: =0
             Size: =10.5
-            Text: ="Employee Name"
-            Width: =140
-            X: =260
-            Y: =101
-            ZIndex: =7
+            Text: ="Settings"
+            Width: =136
+            X: =23
+            Y: =400
+            ZIndex: =28
 
-        project As button:
+        Button3_2 As button:
             BorderColor: =RGBA(0, 0, 0, 0)
             BorderStyle: =BorderStyle.None
             BorderThickness: =1
             DisabledBorderColor: =RGBA(0, 0, 0, 0)
             DisabledColor: =RGBA(166, 166, 166, 1)
-            DisabledFill: =RGBA(244, 244, 244, 1)
-            Fill: =RGBA(122, 171, 159, 1)
+            DisabledFill: =RGBA(0, 0, 0, 1)
+            Fill: =RGBA(73, 102, 95, 1)
             FocusedBorderThickness: =1
             Font: =Font.'Segoe UI'
             FontWeight: =FontWeight.Semibold
-            Height: =50
+            Height: =45
             HoverBorderColor: =RGBA(0, 0, 0, 0)
             HoverColor: =RGBA(255, 255, 255, 1)
-            HoverFill: =ColorFade(RGBA(122, 171, 159, 1), -10%)
-            PressedBorderColor: =ColorFade(RGBA(122, 171, 159, 1), -50%)
+            HoverFill: =ColorFade(RGBA(73,102,95, 1), -10%)
+            PressedBorderColor: =ColorFade(RGBA(73,102,95, 1), -50%)
             PressedColor: =RGBA(255, 255, 255, 1)
-            PressedFill: =ColorFade(RGBA(122, 171, 159, 1), -30%)
+            PressedFill: =ColorFade(RGBA(73,102,95, 1), -30%)
             RadiusBottomLeft: =0
             RadiusBottomRight: =0
             RadiusTopLeft: =0
             RadiusTopRight: =0
             Size: =10.5
-            Text: ="Project"
-            Width: =100
-            X: =405
-            Y: =101
-            ZIndex: =8
-
-        business_unit As button:
-            BorderColor: =RGBA(0, 0, 0, 0)
-            BorderStyle: =BorderStyle.None
-            BorderThickness: =1
-            DisabledBorderColor: =RGBA(0, 0, 0, 0)
-            DisabledColor: =RGBA(166, 166, 166, 1)
-            DisabledFill: =RGBA(244, 244, 244, 1)
-            Fill: =RGBA(122, 171, 159, 1)
-            FocusedBorderThickness: =1
-            Font: =Font.'Segoe UI'
-            FontWeight: =FontWeight.Semibold
-            Height: =50
-            HoverBorderColor: =RGBA(0, 0, 0, 0)
-            HoverColor: =RGBA(255, 255, 255, 1)
-            HoverFill: =ColorFade(RGBA(122, 171, 159, 1), -10%)
-            PressedBorderColor: =ColorFade(RGBA(122, 171, 159, 1), -50%)
-            PressedColor: =RGBA(255, 255, 255, 1)
-            PressedFill: =ColorFade(RGBA(122, 171, 159, 1), -30%)
-            RadiusBottomLeft: =0
-            RadiusBottomRight: =0
-            RadiusTopLeft: =0
-            RadiusTopRight: =0
-            Size: =10.5
-            Text: ="Business Unit"
-            Width: =85
-            X: =510
-            Y: =101
-            ZIndex: =9
-
-        position As button:
-            BorderColor: =RGBA(0, 0, 0, 0)
-            BorderStyle: =BorderStyle.None
-            BorderThickness: =1
-            DisabledBorderColor: =RGBA(0, 0, 0, 0)
-            DisabledColor: =RGBA(166, 166, 166, 1)
-            DisabledFill: =RGBA(244, 244, 244, 1)
-            Fill: =RGBA(122, 171, 159, 1)
-            FocusedBorderThickness: =1
-            Font: =Font.'Segoe UI'
-            FontWeight: =FontWeight.Semibold
-            Height: =50
-            HoverBorderColor: =RGBA(0, 0, 0, 0)
-            HoverColor: =RGBA(255, 255, 255, 1)
-            HoverFill: =ColorFade(RGBA(122, 171, 159, 1), -10%)
-            PressedBorderColor: =ColorFade(RGBA(122, 171, 159, 1), -50%)
-            PressedColor: =RGBA(255, 255, 255, 1)
-            PressedFill: =ColorFade(RGBA(122, 171, 159, 1), -30%)
-            RadiusBottomLeft: =0
-            RadiusBottomRight: =0
-            RadiusTopLeft: =0
-            RadiusTopRight: =0
-            Size: =10.5
-            Text: ="Position"
-            Width: =145
-            X: =600
-            Y: =101
-            ZIndex: =10
-
-        department As button:
-            BorderColor: =RGBA(0, 0, 0, 0)
-            BorderStyle: =BorderStyle.None
-            BorderThickness: =1
-            DisabledBorderColor: =RGBA(0, 0, 0, 0)
-            DisabledColor: =RGBA(166, 166, 166, 1)
-            DisabledFill: =RGBA(244, 244, 244, 1)
-            Fill: =RGBA(122, 171, 159, 1)
-            FocusedBorderThickness: =1
-            Font: =Font.'Segoe UI'
-            FontWeight: =FontWeight.Semibold
-            Height: =50
-            HoverBorderColor: =RGBA(0, 0, 0, 0)
-            HoverColor: =RGBA(255, 255, 255, 1)
-            HoverFill: =ColorFade(RGBA(122, 171, 159, 1), -10%)
-            PressedBorderColor: =ColorFade(RGBA(122, 171, 159, 1), -50%)
-            PressedColor: =RGBA(255, 255, 255, 1)
-            PressedFill: =ColorFade(RGBA(122, 171, 159, 1), -30%)
-            RadiusBottomLeft: =0
-            RadiusBottomRight: =0
-            RadiusTopLeft: =0
-            RadiusTopRight: =0
-            Size: =10.5
-            Text: ="Department"
-            Width: =205
-            X: =756
-            Y: =101
-            ZIndex: =11
-
-        start_date As button:
-            Align: =Align.Left
-            BorderColor: =RGBA(0, 0, 0, 0)
-            BorderStyle: =BorderStyle.None
-            BorderThickness: =1
-            DisabledBorderColor: =RGBA(0, 0, 0, 0)
-            DisabledColor: =RGBA(166, 166, 166, 1)
-            DisabledFill: =RGBA(244, 244, 244, 1)
-            Fill: =RGBA(122, 171, 159, 1)
-            FocusedBorderThickness: =1
-            Font: =Font.'Segoe UI'
-            FontWeight: =FontWeight.Semibold
-            Height: =50
-            HoverBorderColor: =RGBA(0, 0, 0, 0)
-            HoverColor: =RGBA(255, 255, 255, 1)
-            HoverFill: =ColorFade(RGBA(122, 171, 159, 1), -10%)
-            OnSelect: =Set(StartDateSort, If(StartDateSort = "up", "down", "up"))
-            PressedBorderColor: =ColorFade(RGBA(122, 171, 159, 1), -50%)
-            PressedColor: =RGBA(255, 255, 255, 1)
-            PressedFill: =ColorFade(RGBA(122, 171, 159, 1), -30%)
-            RadiusBottomLeft: =0
-            RadiusBottomRight: =0
-            RadiusTopLeft: =0
-            RadiusTopRight: =0
-            Size: =10.5
-            Text: ="Start Date"
-            Width: =130
-            X: =968
-            Y: =101
-            ZIndex: =12
-
-        Actions As button:
-            BorderColor: =RGBA(0, 0, 0, 0)
-            BorderStyle: =BorderStyle.None
-            BorderThickness: =1
-            DisabledBorderColor: =RGBA(0, 0, 0, 0)
-            DisabledColor: =RGBA(166, 166, 166, 1)
-            DisabledFill: =RGBA(244, 244, 244, 1)
-            Fill: =RGBA(122, 171, 159, 1)
-            FocusedBorderThickness: =1
-            Font: =Font.'Segoe UI'
-            FontWeight: =FontWeight.Semibold
-            Height: =50
-            HoverBorderColor: =RGBA(0, 0, 0, 0)
-            HoverColor: =RGBA(255, 255, 255, 1)
-            HoverFill: =ColorFade(RGBA(122, 171, 159, 1), -10%)
-            PressedBorderColor: =ColorFade(RGBA(122, 171, 159, 1), -50%)
-            PressedColor: =RGBA(255, 255, 255, 1)
-            PressedFill: =ColorFade(RGBA(122, 171, 159, 1), -30%)
-            RadiusBottomLeft: =0
-            RadiusBottomRight: =0
-            RadiusTopLeft: =0
-            RadiusTopRight: =0
-            Size: =10.5
-            Text: ="Action"
-            Width: =55
-            X: =1109
-            Y: =101
-            ZIndex: =14
-
-        StartDateUp As icon.ChevronUp:
-            BorderColor: =RGBA(0, 0, 0, 0)
-            BorderThickness: =1
-            Color: =RGBA(255, 255, 255, 1)
-            DisabledBorderColor: =RGBA(0, 0, 0, 0)
-            DisabledColor: =RGBA(220, 220, 220, 1)
-            DisabledFill: =RGBA(0, 0, 0, 0)
-            FocusedBorderThickness: =1
-            Height: =20
-            HoverBorderColor: =RGBA(0, 0, 0, 0)
-            HoverColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
-            HoverFill: =RGBA(0, 0, 0, 0)
-            Icon: =Icon.ChevronUp
-            PressedBorderColor: =RGBA(0, 0, 0, 0)
-            PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
-            PressedFill: =RGBA(0, 0, 0, 0)
-            Visible: =If(StartDateSort = "up", true, false)
-            Width: =20
-            X: =1065
-            Y: =117
-            ZIndex: =16
-
-        StartDateDown As icon.ChevronDown:
-            BorderColor: =RGBA(0, 0, 0, 0)
-            BorderThickness: =1
-            Color: =RGBA(255, 255, 255, 1)
-            DisabledBorderColor: =RGBA(0, 0, 0, 0)
-            DisabledColor: =RGBA(220, 220, 220, 1)
-            DisabledFill: =RGBA(0, 0, 0, 0)
-            FocusedBorderThickness: =1
-            Height: =20
-            HoverBorderColor: =RGBA(0, 0, 0, 0)
-            HoverColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
-            HoverFill: =RGBA(0, 0, 0, 0)
-            Icon: =Icon.ChevronDown
-            PressedBorderColor: =RGBA(0, 0, 0, 0)
-            PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
-            PressedFill: =RGBA(0, 0, 0, 0)
-            Visible: =If(StartDateSort = "down", true, false)
-            Width: =20
-            X: =1065
-            Y: =117
-            ZIndex: =17
-
-    SelectProject As Combobox.pcfdataset:
-        DisplayMode: =DisplayMode.Edit
-        Height: =35
-        InputTextPlaceholder: ="Select Project"
-        IsSearchable: =true
-        Items: =Sort( Distinct( Data, project ), Value )
-        SelectMultiple: =true
-        Width: =200
-        X: =500
-        Y: =20
-        ZIndex: =31
-
-        Value2 As pcfDataField.textualColumn:
-            FieldDisplayName: ="Value"
-            FieldName: ="Value"
-            FieldType: ="s"
-            FieldVariantName: ="textualColumn"
-            Order: =1
-            ZIndex: =24
-
-    SelectPosition As Combobox.pcfdataset:
-        DisplayMode: =DisplayMode.Edit
-        Height: =35
-        InputTextPlaceholder: ="Select Position"
-        IsSearchable: =true
-        Items: =Sort( Distinct( Data, Position ), Value )
-        SelectMultiple: =true
-        Width: =200
-        X: =960
-        Y: =20
-        ZIndex: =36
-
-        Value1 As pcfDataField.textualColumn:
-            FieldDisplayName: ="Value"
-            FieldName: ="Value"
-            FieldType: ="s"
-            FieldVariantName: ="textualColumn"
-            Order: =1
-            ZIndex: =23
-
-    SelectDepartment As Combobox.pcfdataset:
-        DisplayMode: =DisplayMode.Edit
-        Height: =35
-        InputTextPlaceholder: ="Select Department"
-        IsSearchable: =true
-        Items: =Sort( Distinct( Data, Department ), Value )
-        SelectMultiple: =true
-        Width: =200
-        X: =733
-        Y: =20
-        ZIndex: =37
-
-        Value3 As pcfDataField.textualColumn:
-            FieldDisplayName: ="Value"
-            FieldName: ="Value"
-            FieldType: ="e"
-            FieldVariantName: ="textualColumn"
-            Order: =1
-            ZIndex: =25
-
-    "SearchEmployee As 'Text input'":
-        DisplayMode: =DisplayMode.Edit
-        Height: =35
-        Placeholder: ="Search Employee"
-        Type: =""
-        Width: =290
-        X: =200
-        Y: =20
-        ZIndex: =39
+            Text: ="Dashboard"
+            Width: =136
+            X: =23
+            Y: =335
+            ZIndex: =29
 

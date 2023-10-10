@@ -7,7 +7,7 @@ App As appinfo:
         Set(Data, 'Performance Evaluation Store');
         // Set(Data, Filter('Performance Evaluation Store', 'Manager Email' = userEmail))
     StartScreen: =
-    Theme: =PowerAppsTheme
+    Theme: =SteelTheme
 
     Host As hostControl.DefaultHostControlVariant:
         OnCancel: =false

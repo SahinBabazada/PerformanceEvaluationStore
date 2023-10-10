@@ -74,6 +74,36 @@
             {
               "logicalLocations": [
                 {
+                  "fullyQualifiedName": "'Start Screen'.Table.Go.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Start Screen'.Table.Go.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Start Screen",
+                "type": "'Start Screen'.Table.Go"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
                   "fullyQualifiedName": "'Start Screen'.StartDateDown.AccessibleLabel"
                 }
               ],
