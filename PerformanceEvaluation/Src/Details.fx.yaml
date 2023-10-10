@@ -1,0 +1,130 @@
+Details As screen:
+    LoadingSpinnerColor: =RGBA(0, 120, 212, 1)
+
+    Label6 As label:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =1
+        Color: =RGBA(51, 51, 51, 1)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        FocusedBorderThickness: =1
+        Font: =Font.'Segoe UI'
+        PaddingLeft: =0
+        Size: =10.5
+        Text: =rowId
+        Width: =260
+        X: =270
+        Y: =45
+        ZIndex: =6
+
+    LeftPanel_1 As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =6
+
+        LeftPanelShape_1 As rectangle:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =1
+            DisabledFill: =RGBA(122, 171, 159, 1)
+            Fill: =RGBA(122, 171, 159, 1)
+            FocusedBorderThickness: =1
+            Height: =790
+            HoverFill: =RGBA(122, 171, 159, 1)
+            PressedFill: =RGBA(122, 171, 159, 1)
+            Width: =176
+            ZIndex: =2
+
+        UserPicture_1 As image:
+            BorderColor: =RGBA(141, 198, 63, 1)
+            BorderThickness: =1
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledFill: =RGBA(0, 0, 0, 0)
+            DisplayMode: =DisplayMode.View
+            FocusedBorderThickness: =1
+            Height: =130
+            HoverBorderColor: =RGBA(0, 0, 0, 0)
+            HoverFill: =RGBA(0, 0, 0, 0)
+            Image: =Office365Users.UserPhotoV2(Office365Users.MyProfile().Id)
+            PressedBorderColor: =RGBA(0, 0, 0, 0)
+            PressedFill: =RGBA(0, 0, 0, 0)
+            RadiusBottomLeft: =130
+            RadiusBottomRight: =130
+            RadiusTopLeft: =130
+            RadiusTopRight: =130
+            Width: =130
+            X: =23
+            Y: =21
+            ZIndex: =3
+
+        UserJobTitle_1 As label:
+            Align: =Align.Center
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =1
+            Color: =RGBA(255, 255, 255, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisplayMode: =DisplayMode.View
+            FocusedBorderThickness: =1
+            Font: =Font.'Segoe UI'
+            Height: =70
+            PaddingLeft: =0
+            Size: =12
+            Text: =Office365Users.MyProfile().JobTitle
+            Width: =176
+            Y: =202
+            ZIndex: =4
+
+        UserDisplayName_1 As label:
+            Align: =Align.Center
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =1
+            Color: =RGBA(255, 255, 255, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisplayMode: =DisplayMode.View
+            FocusedBorderThickness: =1
+            Font: =Font.'Segoe UI'
+            Height: =62
+            PaddingLeft: =0
+            Size: =11
+            Text: =Office365Users.MyProfile().DisplayName
+            Width: =176
+            Y: =161
+            ZIndex: =5
+
+    Button2 As button:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =1
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        Fill: =RGBA(0, 120, 212, 1)
+        FocusedBorderThickness: =1
+        Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Semibold
+        Height: =32
+        HoverBorderColor: =RGBA(0, 0, 0, 0)
+        HoverColor: =RGBA(255, 255, 255, 1)
+        HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
+        OnSelect: =Back()
+        PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
+        PressedColor: =RGBA(255, 255, 255, 1)
+        PressedFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+        RadiusBottomLeft: =0
+        RadiusBottomRight: =0
+        RadiusTopLeft: =0
+        RadiusTopRight: =0
+        Size: =10.5
+        Text: ="Back"
+        Width: =85
+        X: =507
+        Y: =272
+        ZIndex: =7
+

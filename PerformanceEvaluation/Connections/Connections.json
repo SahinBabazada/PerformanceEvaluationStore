@@ -1,0 +1,51 @@
+{
+  "0cff5944-0a31-4cc1-be4e-79bed5d9509b": {
+    "appActions": [
+      "providers/PowerPlatform.Governance/Operations/Read"
+    ],
+    "connectionRef": {
+      "apiTier": "Standard",
+      "displayName": "SharePoint",
+      "iconUri": "https://connectoricons-prod.azureedge.net/u/henryorsborn/partial-builds/asev3migrations-with-resourceTemplate/1.0.1653.3414/sharepointonline/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_sharepointonline",
+      "parameterHints": {},
+      "parameterHintsV2": {}
+    },
+    "datasets": {
+      "https://azerbaijansupermarket0.sharepoint.com/sites/HROperations": {
+        "dataSources": {
+          "Performance Evaluation Store": {
+            "tableName": "c9bbcf1a-ed34-4cfb-9a56-a2d6baad8c4c"
+          }
+        }
+      }
+    },
+    "dataSources": [
+      "Performance Evaluation Store"
+    ],
+    "dependencies": {},
+    "dependents": [],
+    "id": "0cff5944-0a31-4cc1-be4e-79bed5d9509b"
+  },
+  "b8fe99ab-aa17-47e6-873c-5afa60d865e5": {
+    "appActions": [
+      "MyProfile",
+      "UserPhoto_V2"
+    ],
+    "connectionRef": {
+      "apiTier": "Standard",
+      "displayName": "Office 365 Users",
+      "iconUri": "https://connectoricons-prod.azureedge.net/u/henryorsborn/partial-builds/asev3migrations-with-resourceTemplate/1.0.1653.3414/office365users/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_office365users",
+      "parameterHints": {},
+      "parameterHintsV2": {}
+    },
+    "datasets": {},
+    "dataSources": [
+      "Office365Users"
+    ],
+    "dependencies": {},
+    "dependents": [],
+    "id": "b8fe99ab-aa17-47e6-873c-5afa60d865e5"
+  }
+}

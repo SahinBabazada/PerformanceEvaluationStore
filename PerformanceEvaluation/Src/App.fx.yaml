@@ -1,0 +1,28 @@
+App As appinfo:
+    BackEnabled: =false
+    OnStart: |-
+        =Set(StartDateSort, "up");
+        Set(EmployeeNameSort, "up");
+        Set(userEmail, Office365Users.MyProfile().UserPrincipalName);
+        Set(Data, 'Performance Evaluation Store');
+        // Set(Data, Filter('Performance Evaluation Store', 'Manager Email' = userEmail))
+    StartScreen: =
+    Theme: =PowerAppsTheme
+
+    Host As hostControl.DefaultHostControlVariant:
+        OnCancel: =false
+        OnEdit: =false
+        OnNew: =false
+        OnSave: =false
+        OnView: =false
+
+    SharePointIntegration As hostControl.SharePointHostControlVariant:
+        DataSource: =[@'Performance Evaluation Store']
+        OnCancel: =
+        OnEdit: =
+        OnNew: |
+            =
+        OnSave: =
+        OnView: =
+        SelectedHidden: =LookUp([@'Performance Evaluation Store'], ID = Self.SelectedListItemID)
+
