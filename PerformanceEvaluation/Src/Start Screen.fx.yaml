@@ -5,7 +5,7 @@
     Table As gallery.galleryVertical:
         BorderColor: =RGBA(166, 166, 166, 1)
         DelayItemLoading: =true
-        Height: =585
+        Height: =596
         Items: |+
             =Search(SortByColumns(
                  Filter(
@@ -21,7 +21,7 @@
                     )
                 ),
                  "field_7", If(StartDateSort = "down",  SortOrder.Descending, SortOrder.Ascending)
-            ), SearchEmployee.Text, "Title", "field_1")
+            ), Text(SearchEmployee), "Title", "field_1")
             
         Layout: =Layout.Vertical
         LoadingSpinner: =LoadingSpinner.Data
@@ -29,7 +29,7 @@
         Transition: =Transition.Push
         Width: =995
         X: =190
-        Y: =187
+        Y: =169
         ZIndex: =1
 
         Badge As label:
@@ -298,6 +298,22 @@
             Y: =161
             ZIndex: =5
 
+    SeperatorLiner As rectangle:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =1
+        DisabledFill: =RGBA(166, 166, 166, 1)
+        Fill: =RGBA(122, 171, 159, 1)
+        FocusedBorderThickness: =1
+        Height: =2
+        HoverFill: =RGBA(0, 120, 212, 1)
+        OnSelect: =
+        PressedFill: =RGBA(0, 120, 212, 1)
+        Width: =983
+        X: =196
+        Y: =85
+        ZIndex: =13
+
     Button3 As button:
         BorderColor: =RGBA(0, 0, 0, 0)
         BorderStyle: =BorderStyle.None
@@ -309,7 +325,7 @@
         FocusedBorderThickness: =1
         Font: =Font.'Segoe UI'
         FontWeight: =FontWeight.Semibold
-        Height: =52
+        Height: =56
         HoverBorderColor: =RGBA(0, 0, 0, 0)
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =ColorFade(RGBA(73,102,95, 1), -10%)
@@ -322,169 +338,10 @@
         RadiusTopRight: =0
         Size: =10.5
         Text: ="Admin Panel"
-        Width: =176
-        Y: =476
+        Width: =136
+        X: =23
+        Y: =466
         ZIndex: =27
-
-    FilterPanel As group:
-        Height: =5
-        Width: =5
-        X: =40
-        Y: =40
-        ZIndex: =27
-
-        SeperatorLiner As rectangle:
-            BorderColor: =RGBA(0, 0, 0, 0)
-            BorderStyle: =BorderStyle.None
-            BorderThickness: =1
-            DisabledFill: =RGBA(166, 166, 166, 1)
-            Fill: =RGBA(122, 171, 159, 1)
-            FocusedBorderThickness: =1
-            Height: =2
-            HoverFill: =RGBA(0, 120, 212, 1)
-            OnSelect: =
-            PressedFill: =RGBA(0, 120, 212, 1)
-            Width: =983
-            X: =190
-            Y: =106
-            ZIndex: =13
-
-        SelectProject As combobox:
-            BorderColor: =RGBA(166, 166, 166, 1)
-            BorderThickness: =1
-            ChevronBackground: =RGBA(255, 255, 255, 1)
-            ChevronDisabledBackground: =RGBA(244, 244, 244, 1)
-            ChevronDisabledFill: =RGBA(166, 166, 166, 1)
-            ChevronFill: =RGBA(33, 33, 33, 1)
-            ChevronHoverBackground: =RGBA(212, 212, 212, 1)
-            ChevronHoverFill: =RGBA(33, 33, 33, 1)
-            Color: =RGBA(51, 51, 51, 1)
-            DisabledBorderColor: =RGBA(0, 0, 0, 0)
-            DisabledColor: =RGBA(166, 166, 166, 1)
-            DisabledFill: =RGBA(244, 244, 244, 1)
-            DisplayFields: =["Value"]
-            FocusedBorderThickness: =1
-            Font: =Font.'Segoe UI'
-            Height: =46
-            HoverBorderColor: =ColorFade(RGBA(241, 238, 238, 1), -30%)
-            HoverColor: =RGBA(51, 51, 51, 1)
-            HoverFill: =RGBA(212, 212, 212, 1)
-            InputTextPlaceholder: ="Select Project"
-            IsSearchable: =false
-            Items: =Distinct(Data, project)
-            NoSelectionText: ="Select Project"
-            PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
-            PressedColor: =RGBA(255, 255, 255, 1)
-            PressedFill: =RGBA(0, 120, 212, 1)
-            SearchFields: =["Value"]
-            SearchItems: =[]
-            SelectionFill: =RGBA(0, 120, 212, 1)
-            Size: =10.5
-            Width: =206
-            X: =433
-            Y: =19
-            ZIndex: =23
-
-        SelectPosition As combobox:
-            BorderColor: =RGBA(166, 166, 166, 1)
-            BorderThickness: =1
-            ChevronBackground: =RGBA(255, 255, 255, 1)
-            ChevronDisabledBackground: =RGBA(244, 244, 244, 1)
-            ChevronDisabledFill: =RGBA(166, 166, 166, 1)
-            ChevronFill: =RGBA(33, 33, 33, 1)
-            ChevronHoverBackground: =RGBA(212, 212, 212, 1)
-            ChevronHoverFill: =RGBA(33, 33, 33, 1)
-            Color: =RGBA(51, 51, 51, 1)
-            DisabledBorderColor: =RGBA(0, 0, 0, 0)
-            DisabledColor: =RGBA(166, 166, 166, 1)
-            DisabledFill: =RGBA(244, 244, 244, 1)
-            DisplayFields: =["Value"]
-            FocusedBorderThickness: =1
-            Font: =Font.'Segoe UI'
-            FontWeight: =FontWeight.Lighter
-            Height: =49
-            HoverBorderColor: =ColorFade(RGBA(241, 238, 238, 1), -30%)
-            HoverColor: =RGBA(51, 51, 51, 1)
-            HoverFill: =RGBA(212, 212, 212, 1)
-            InputTextPlaceholder: ="Select Position"
-            IsSearchable: =false
-            Items: =Distinct(Data, Position)
-            NoSelectionText: ="Select Position"
-            PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
-            PressedColor: =RGBA(255, 255, 255, 1)
-            PressedFill: =RGBA(0, 120, 212, 1)
-            SearchFields: =["Value"]
-            SearchItems: =[]
-            SelectionFill: =RGBA(0, 120, 212, 1)
-            Size: =10.5
-            Width: =211
-            X: =898
-            Y: =19
-            ZIndex: =24
-
-        SelectDepartment As combobox:
-            BorderColor: =RGBA(166, 166, 166, 1)
-            BorderThickness: =1
-            ChevronBackground: =RGBA(255, 255, 255, 1)
-            ChevronDisabledBackground: =RGBA(244, 244, 244, 1)
-            ChevronDisabledFill: =RGBA(166, 166, 166, 1)
-            ChevronFill: =RGBA(33, 33, 33, 1)
-            ChevronHoverBackground: =RGBA(212, 212, 212, 1)
-            ChevronHoverFill: =RGBA(33, 33, 33, 1)
-            Color: =RGBA(51, 51, 51, 1)
-            DisabledBorderColor: =RGBA(0, 0, 0, 0)
-            DisabledColor: =RGBA(166, 166, 166, 1)
-            DisabledFill: =RGBA(244, 244, 244, 1)
-            DisplayFields: =["Value"]
-            FocusedBorderThickness: =1
-            Font: =Font.'Segoe UI'
-            Height: =49
-            HoverBorderColor: =ColorFade(RGBA(241, 238, 238, 1), -30%)
-            HoverColor: =RGBA(51, 51, 51, 1)
-            HoverFill: =RGBA(212, 212, 212, 1)
-            InputTextPlaceholder: ="Select Department"
-            IsSearchable: =false
-            Items: =Distinct(Data, Department)
-            NoSelectionText: ="Select Department"
-            OnSelect: =Filter(Data, Department in SelectDepartment.SelectedItems);
-            PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
-            PressedColor: =RGBA(255, 255, 255, 1)
-            PressedFill: =RGBA(0, 120, 212, 1)
-            SearchFields: =["Value"]
-            SearchItems: =[]
-            SelectionFill: =RGBA(0, 120, 212, 1)
-            Size: =10.5
-            Width: =211
-            X: =672
-            Y: =19
-            ZIndex: =25
-
-        SearchEmployee As text:
-            BorderColor: =RGBA(166, 166, 166, 1)
-            Clear: =true
-            Color: =RGBA(51, 51, 51, 1)
-            Default: ="Text input"
-            DisabledBorderColor: =RGBA(0, 0, 0, 0)
-            DisabledColor: =RGBA(166, 166, 166, 1)
-            DisabledFill: =RGBA(244, 244, 244, 1)
-            FocusedBorderThickness: =1
-            Font: =Font.'Segoe UI'
-            Height: =49
-            HoverBorderColor: =ColorFade(RGBA(241, 238, 238, 1), -30%)
-            HoverColor: =RGBA(51, 51, 51, 1)
-            HoverFill: =RGBA(255, 255, 255, 1)
-            PressedBorderColor: =RGBA(0, 120, 212, 1)
-            PressedColor: =RGBA(51, 51, 51, 1)
-            PressedFill: =RGBA(255, 255, 255, 1)
-            RadiusBottomLeft: =0
-            RadiusBottomRight: =0
-            RadiusTopLeft: =0
-            RadiusTopRight: =0
-            Size: =10.5
-            Width: =206
-            X: =194
-            Y: =19
-            ZIndex: =26
 
     Button3_1 As button:
         BorderColor: =RGBA(0, 0, 0, 0)
@@ -497,7 +354,7 @@
         FocusedBorderThickness: =1
         Font: =Font.'Segoe UI'
         FontWeight: =FontWeight.Semibold
-        Height: =52
+        Height: =45
         HoverBorderColor: =RGBA(0, 0, 0, 0)
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =ColorFade(RGBA(73,102,95, 1), -10%)
@@ -510,8 +367,9 @@
         RadiusTopRight: =0
         Size: =10.5
         Text: ="Settings"
-        Width: =176
-        Y: =412
+        Width: =136
+        X: =23
+        Y: =400
         ZIndex: =28
 
     Button3_2 As button:
@@ -525,7 +383,7 @@
         FocusedBorderThickness: =1
         Font: =Font.'Segoe UI'
         FontWeight: =FontWeight.Semibold
-        Height: =52
+        Height: =45
         HoverBorderColor: =RGBA(0, 0, 0, 0)
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =ColorFade(RGBA(73,102,95, 1), -10%)
@@ -538,8 +396,9 @@
         RadiusTopRight: =0
         Size: =10.5
         Text: ="Dashboard"
-        Width: =176
-        Y: =347
+        Width: =136
+        X: =23
+        Y: =335
         ZIndex: =29
 
     Headers As group:
@@ -575,7 +434,7 @@
             Text: ="Badge"
             Width: =65
             X: =190
-            Y: =119
+            Y: =101
             ZIndex: =6
 
         employee_name As button:
@@ -606,7 +465,7 @@
             Text: ="Employee Name"
             Width: =140
             X: =260
-            Y: =119
+            Y: =101
             ZIndex: =7
 
         project As button:
@@ -635,7 +494,7 @@
             Text: ="Project"
             Width: =100
             X: =405
-            Y: =119
+            Y: =101
             ZIndex: =8
 
         business_unit As button:
@@ -664,7 +523,7 @@
             Text: ="Business Unit"
             Width: =85
             X: =510
-            Y: =119
+            Y: =101
             ZIndex: =9
 
         position As button:
@@ -693,7 +552,7 @@
             Text: ="Position"
             Width: =145
             X: =600
-            Y: =119
+            Y: =101
             ZIndex: =10
 
         department As button:
@@ -722,7 +581,7 @@
             Text: ="Department"
             Width: =205
             X: =756
-            Y: =119
+            Y: =101
             ZIndex: =11
 
         start_date As button:
@@ -753,7 +612,7 @@
             Text: ="Start Date"
             Width: =130
             X: =968
-            Y: =119
+            Y: =101
             ZIndex: =12
 
         Actions As button:
@@ -782,7 +641,7 @@
             Text: ="Action"
             Width: =55
             X: =1109
-            Y: =119
+            Y: =101
             ZIndex: =14
 
         StartDateUp As icon.ChevronUp:
@@ -804,7 +663,7 @@
             Visible: =If(StartDateSort = "up", true, false)
             Width: =20
             X: =1065
-            Y: =135
+            Y: =117
             ZIndex: =16
 
         StartDateDown As icon.ChevronDown:
@@ -826,6 +685,76 @@
             Visible: =If(StartDateSort = "down", true, false)
             Width: =20
             X: =1065
-            Y: =135
+            Y: =117
             ZIndex: =17
+
+    SelectProject As Combobox.pcfdataset:
+        DisplayMode: =DisplayMode.Edit
+        Height: =35
+        InputTextPlaceholder: ="Select Project"
+        IsSearchable: =true
+        Items: =Sort( Distinct( Data, project ), Value )
+        SelectMultiple: =true
+        Width: =200
+        X: =500
+        Y: =20
+        ZIndex: =31
+
+        Value2 As pcfDataField.textualColumn:
+            FieldDisplayName: ="Value"
+            FieldName: ="Value"
+            FieldType: ="s"
+            FieldVariantName: ="textualColumn"
+            Order: =1
+            ZIndex: =24
+
+    SelectPosition As Combobox.pcfdataset:
+        DisplayMode: =DisplayMode.Edit
+        Height: =35
+        InputTextPlaceholder: ="Select Position"
+        IsSearchable: =true
+        Items: =Sort( Distinct( Data, Position ), Value )
+        SelectMultiple: =true
+        Width: =200
+        X: =960
+        Y: =20
+        ZIndex: =36
+
+        Value1 As pcfDataField.textualColumn:
+            FieldDisplayName: ="Value"
+            FieldName: ="Value"
+            FieldType: ="s"
+            FieldVariantName: ="textualColumn"
+            Order: =1
+            ZIndex: =23
+
+    SelectDepartment As Combobox.pcfdataset:
+        DisplayMode: =DisplayMode.Edit
+        Height: =35
+        InputTextPlaceholder: ="Select Department"
+        IsSearchable: =true
+        Items: =Sort( Distinct( Data, Department ), Value )
+        SelectMultiple: =true
+        Width: =200
+        X: =733
+        Y: =20
+        ZIndex: =37
+
+        Value3 As pcfDataField.textualColumn:
+            FieldDisplayName: ="Value"
+            FieldName: ="Value"
+            FieldType: ="e"
+            FieldVariantName: ="textualColumn"
+            Order: =1
+            ZIndex: =25
+
+    "SearchEmployee As 'Text input'":
+        DisplayMode: =DisplayMode.Edit
+        Height: =35
+        Placeholder: ="Search Employee"
+        Type: =""
+        Width: =290
+        X: =200
+        Y: =20
+        ZIndex: =39
 
