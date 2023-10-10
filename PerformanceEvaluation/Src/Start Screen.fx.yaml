@@ -41,13 +41,13 @@
                  Filter(
                     Data,
                     If(
-                        IsBlankOrError(SelectProject.SelectedItems), true, project in SelectProject.SelectedItems
+                        IsEmpty(SelectProject.SelectedItems), true, project in SelectProject.SelectedItems
                     ),
                     If(
-                        IsBlankOrError(SelectDepartment.SelectedItems), true, Department in SelectDepartment.SelectedItems
+                        IsEmpty(SelectDepartment.SelectedItems), true, Department in SelectDepartment.SelectedItems
                     ),
                     If(
-                        IsBlankOrError(SelectPosition.SelectedItems), true, Position in SelectPosition.SelectedItems
+                        IsEmpty(SelectPosition.SelectedItems), true, Position in SelectPosition.SelectedItems
                     )
                 ),
                  "field_7", If(StartDateSort = "down",  SortOrder.Descending, SortOrder.Ascending)
