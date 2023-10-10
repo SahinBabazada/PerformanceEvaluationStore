@@ -5899,7 +5899,7 @@
         {
           "Category": "Design",
           "PropertyName": "LoadingSpinner",
-          "RuleProviderType": "Unknown"
+          "RuleProviderType": "User"
         },
         {
           "Category": "Design",

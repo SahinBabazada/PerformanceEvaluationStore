@@ -1,5 +1,6 @@
 "'Start Screen' As screen.'webHostedFormLayout_ver3.0'":
     Fill: =
+    LoadingSpinner: =LoadingSpinner.Data
     LoadingSpinnerColor: =RGBA(0, 120, 212, 1)
 
     Table As gallery.galleryVertical:
