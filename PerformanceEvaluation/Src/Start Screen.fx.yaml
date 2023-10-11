@@ -448,7 +448,7 @@
             RadiusTopRight: =0
             Size: =10.5
             Text: ="Department"
-            Width: =203
+            Width: =185
             X: =748
             Y: =101
             ZIndex: =12
@@ -481,7 +481,7 @@
             Text: ="Start Date"
             Width: =129
             X: =945
-            Y: =99
+            Y: =101
             ZIndex: =13
 
         Actions As button:
@@ -532,7 +532,7 @@
             Visible: =If(StartDateSort = "up", true, false)
             Width: =20
             X: =1024
-            Y: =115
+            Y: =117
             ZIndex: =16
 
         StartDateDown As icon.ChevronDown:
@@ -554,7 +554,7 @@
             Visible: =If(StartDateSort = "down", true, false)
             Width: =20
             X: =1024
-            Y: =115
+            Y: =117
             ZIndex: =17
 
     FilterPanel As group:
