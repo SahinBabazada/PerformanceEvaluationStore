@@ -581,7 +581,7 @@
       "StyleName": "defaultLabelStyle",
       "Type": "ControlInfo"
     },
-    "LeftPanel_1": {
+    "LeftPanel_3": {
       "AllowAccessToGlobals": true,
       "ControlPropertyState": [
         "X",
@@ -599,23 +599,13 @@
       "IsLocked": false,
       "LayoutName": "",
       "MetaDataIDKey": "",
-      "Name": "LeftPanel_1",
+      "Name": "LeftPanel_3",
       "ParentIndex": 6,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
           "Category": "Design",
-          "PropertyName": "X",
-          "RuleProviderType": "Unknown"
-        },
-        {
-          "Category": "Design",
-          "PropertyName": "Y",
-          "RuleProviderType": "Unknown"
-        },
-        {
-          "Category": "Design",
-          "PropertyName": "Width",
+          "PropertyName": "ZIndex",
           "RuleProviderType": "Unknown"
         },
         {
@@ -625,14 +615,24 @@
         },
         {
           "Category": "Design",
-          "PropertyName": "ZIndex",
+          "PropertyName": "Width",
+          "RuleProviderType": "Unknown"
+        },
+        {
+          "Category": "Design",
+          "PropertyName": "Y",
+          "RuleProviderType": "Unknown"
+        },
+        {
+          "Category": "Design",
+          "PropertyName": "X",
           "RuleProviderType": "Unknown"
         }
       ],
       "StyleName": "",
       "Type": "ControlInfo"
     },
-    "LeftPanelShape_1": {
+    "LeftPanelShape_3": {
       "AllowAccessToGlobals": true,
       "ControlPropertyState": [
         {
@@ -695,7 +695,7 @@
       "IsLocked": false,
       "LayoutName": "",
       "MetaDataIDKey": "",
-      "Name": "LeftPanelShape_1",
+      "Name": "LeftPanelShape_3",
       "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -778,7 +778,7 @@
       "StyleName": "defaultRectangleStyle",
       "Type": "ControlInfo"
     },
-    "UserDisplayName_1": {
+    "UserDisplayName_3": {
       "AllowAccessToGlobals": true,
       "ControlPropertyState": [
         "Live",
@@ -893,7 +893,7 @@
       "IsLocked": false,
       "LayoutName": "",
       "MetaDataIDKey": "",
-      "Name": "UserDisplayName_1",
+      "Name": "UserDisplayName_3",
       "ParentIndex": 3,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -1096,7 +1096,7 @@
       "StyleName": "defaultLabelStyle",
       "Type": "ControlInfo"
     },
-    "UserJobTitle_1": {
+    "UserJobTitle_3": {
       "AllowAccessToGlobals": true,
       "ControlPropertyState": [
         "Live",
@@ -1211,7 +1211,7 @@
       "IsLocked": false,
       "LayoutName": "",
       "MetaDataIDKey": "",
-      "Name": "UserJobTitle_1",
+      "Name": "UserJobTitle_3",
       "ParentIndex": 4,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -1414,7 +1414,7 @@
       "StyleName": "defaultLabelStyle",
       "Type": "ControlInfo"
     },
-    "UserPicture_1": {
+    "UserPicture_3": {
       "AllowAccessToGlobals": true,
       "ControlPropertyState": [
         {
@@ -1540,7 +1540,7 @@
       "IsLocked": false,
       "LayoutName": "",
       "MetaDataIDKey": "",
-      "Name": "UserPicture_1",
+      "Name": "UserPicture_3",
       "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
