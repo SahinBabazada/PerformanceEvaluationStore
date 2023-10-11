@@ -47,5 +47,42 @@
     "dependencies": {},
     "dependents": [],
     "id": "b8fe99ab-aa17-47e6-873c-5afa60d865e5"
+  },
+  "f624b614-9dc8-4855-b7be-d2ea7cfb1083": {
+    "connectionRef": {
+      "authenticationType": "windowsAuthentication",
+      "displayName": "SQL Server",
+      "executionRestrictions": {
+        "apiId": "/providers/microsoft.powerapps/apis/shared_sql",
+        "apiVer": 2,
+        "appVer": "3.23094.31",
+        "modifiedOn": "2023-10-11 09:51:44",
+        "policy": "{\"type\":\"tabular\",\"dataSources\":{\"[dbo].[employeelist]\":[\"get\"]}}",
+        "version": 1
+      },
+      "gatewayObjectIdHint": "c3266ffc-e5e3-4c8c-84a5-66efb4f4e7c3",
+      "iconUri": "https://connectoricons-prod.azureedge.net/u/laborbol/partial-builds/sql-1644-2/1.0.1644.3343/sql/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_sql",
+      "isOnPremiseConnection": true,
+      "sharedConnectionId": "/providers/microsoft.powerapps/apis/shared_sql/connections/shared-sql-a13c8259-01ea-4937-a4bd-316f234df022"
+    },
+    "datasets": {
+      "192.168.10.131,Bravo": {
+        "dataSources": {
+          "EmployeeList": {
+            "tableName": "[dbo].[EmployeeList]"
+          }
+        }
+      }
+    },
+    "dataSources": [
+      "EmployeeList"
+    ],
+    "dependencies": {},
+    "dependents": [],
+    "endpoints": [
+      "192.168.10.131,Bravo"
+    ],
+    "id": "f624b614-9dc8-4855-b7be-d2ea7cfb1083"
   }
 }

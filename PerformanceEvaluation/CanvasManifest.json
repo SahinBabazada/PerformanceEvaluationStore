@@ -94,7 +94,7 @@
       "zeroalltabindexes": false
     },
     "Author": "",
-    "BindingErrorCount": 0,
+    "BindingErrorCount": 9,
     "ContainsThirdPartyPcfControls": false,
     "DefaultConnectedDataSourceMaxGetRowsCount": 500,
     "DocumentAppType": "Web",
@@ -129,6 +129,7 @@
   "ScreenOrder": [
     "Start Screen",
     "Details",
-    "Dasboard"
+    "Dasboard",
+    "Start Screen_1"
   ]
 }

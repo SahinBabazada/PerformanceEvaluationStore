@@ -11,6 +11,7 @@
     "IsSampleData": false,
     "IsWritable": true,
     "LogicalName": "msdyn_aiconfiguration",
+    "MaxGetRowsCount": 500,
     "Name": "18333537-fdd1-4579-907c-955609c15d25",
     "NativeCDSDataSourceInfoNameMapping": {
       "createdby": "Created By",
