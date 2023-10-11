@@ -1,0 +1,202 @@
+"Dasboard As screen.'webHostedFormLayout_ver3.0'":
+    Fill: =
+    LoadingSpinner: =LoadingSpinner.Data
+    LoadingSpinnerColor: =RGBA(0, 120, 212, 1)
+
+    ButtonCanvas1_5 As Button:
+        Appearance: ='ButtonCanvas.Appearance'.Secondary
+        DisplayMode: =DisplayMode.Edit
+        Height: =44
+        Text: ="Settings"
+        Width: =153
+        X: =11
+        Y: =451
+        ZIndex: =22
+
+    ButtonCanvas1_4 As Button:
+        DisplayMode: =DisplayMode.Edit
+        Height: =49
+        Text: ="Dashboard"
+        Width: =153
+        X: =11
+        Y: =384
+        ZIndex: =23
+
+    ButtonCanvas1_6 As Button:
+        Appearance: ='ButtonCanvas.Appearance'.Secondary
+        DisplayMode: =DisplayMode.Edit
+        Height: =49
+        Text: ="Admin Panel"
+        Width: =153
+        X: =11
+        Y: =508
+        ZIndex: =24
+
+    ButtonCanvas1_7 As Button:
+        Appearance: ='ButtonCanvas.Appearance'.Secondary
+        DisplayMode: =DisplayMode.Edit
+        Height: =49
+        OnSelect: =Navigate('Start Screen', ScreenTransition.Fade)
+        Text: ="Employees"
+        Width: =153
+        X: =11
+        Y: =324
+        ZIndex: =25
+
+    FilterPanel_1 As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =40
+
+        SelectProject_1 As Combobox.pcfdataset:
+            DisplayMode: =DisplayMode.Edit
+            Height: =35
+            InputTextPlaceholder: ="Select Project"
+            IsSearchable: =true
+            Items: =Sort( Distinct( Data, project ), Value )
+            SelectMultiple: =true
+            Width: =200
+            X: =500
+            Y: =20
+            ZIndex: =18
+
+            Value2_1 As pcfDataField.textualColumn:
+                FieldDisplayName: ="Value"
+                FieldName: ="Value"
+                FieldType: ="s"
+                FieldVariantName: ="textualColumn"
+                Order: =1
+                ZIndex: =24
+
+        SelectPosition_1 As Combobox.pcfdataset:
+            DisplayMode: =DisplayMode.Edit
+            Height: =35
+            InputTextPlaceholder: ="Select Position"
+            IsSearchable: =true
+            Items: =Sort( Distinct( Data, Position ), Value )
+            SelectMultiple: =true
+            Width: =200
+            X: =960
+            Y: =20
+            ZIndex: =19
+
+            Value1_1 As pcfDataField.textualColumn:
+                FieldDisplayName: ="Value"
+                FieldName: ="Value"
+                FieldType: ="s"
+                FieldVariantName: ="textualColumn"
+                Order: =1
+                ZIndex: =23
+
+        SelectDepartment_1 As Combobox.pcfdataset:
+            DisplayMode: =DisplayMode.Edit
+            Height: =35
+            InputTextPlaceholder: ="Select Department"
+            IsSearchable: =true
+            Items: =Sort( Distinct( Data, Department ), Value )
+            SelectMultiple: =true
+            Width: =200
+            X: =733
+            Y: =20
+            ZIndex: =20
+
+            Value3_1 As pcfDataField.textualColumn:
+                FieldDisplayName: ="Value"
+                FieldName: ="Value"
+                FieldType: ="e"
+                FieldVariantName: ="textualColumn"
+                Order: =1
+                ZIndex: =25
+
+        "SearchEmployee_1 As 'Text input'":
+            DisplayMode: =DisplayMode.Edit
+            Height: =35
+            Placeholder: ="Search Employee"
+            Type: =""
+            Width: =290
+            X: =200
+            Y: =20
+            ZIndex: =21
+
+    LeftPanel_2 As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =40
+
+        LeftPanelShape_2 As rectangle:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =1
+            DisabledFill: =RGBA(83, 144, 164, 1)
+            Fill: =RGBA(83, 144, 164, 1)
+            FocusedBorderThickness: =1
+            Height: =790
+            HoverFill: =RGBA(83, 144, 164, 1)
+            PressedFill: =RGBA(83, 144, 164, 1)
+            Width: =176
+            ZIndex: =3
+
+        UserPicture_2 As image:
+            BorderColor: =RGBA(141, 198, 63, 1)
+            BorderThickness: =1
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledFill: =RGBA(0, 0, 0, 0)
+            DisplayMode: =DisplayMode.View
+            FocusedBorderThickness: =1
+            Height: =130
+            HoverBorderColor: =RGBA(0, 0, 0, 0)
+            HoverFill: =RGBA(0, 0, 0, 0)
+            Image: =Office365Users.UserPhotoV2(Office365Users.MyProfile().Id)
+            PressedBorderColor: =RGBA(0, 0, 0, 0)
+            PressedFill: =RGBA(0, 0, 0, 0)
+            RadiusBottomLeft: =130
+            RadiusBottomRight: =130
+            RadiusTopLeft: =130
+            RadiusTopRight: =130
+            Width: =130
+            X: =23
+            Y: =21
+            ZIndex: =4
+
+        UserJobTitle_2 As label:
+            Align: =Align.Center
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =1
+            Color: =RGBA(255, 255, 255, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisplayMode: =DisplayMode.View
+            FocusedBorderThickness: =1
+            Font: =Font.'Segoe UI'
+            Height: =70
+            PaddingLeft: =0
+            Size: =12
+            Text: =Office365Users.MyProfile().JobTitle
+            Width: =176
+            Y: =214
+            ZIndex: =5
+
+        UserDisplayName_2 As label:
+            Align: =Align.Center
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =1
+            Color: =RGBA(255, 255, 255, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisplayMode: =DisplayMode.View
+            FocusedBorderThickness: =1
+            Font: =Font.'Segoe UI'
+            Height: =62
+            PaddingLeft: =0
+            Size: =11
+            Text: =Office365Users.MyProfile().DisplayName
+            Width: =176
+            Y: =161
+            ZIndex: =6
+

@@ -41,13 +41,13 @@
                  Filter(
                     Data,
                     If(
-                        IsEmpty(SelectProject.SelectedItems), true, project in SelectProject.SelectedItems
+                        Or(IsEmpty(SelectProject.SelectedItems), IsBlank(SelectProject.SelectedItems)), true, project in SelectProject.SelectedItems
                     ),
                     If(
-                        IsEmpty(SelectDepartment.SelectedItems), true, Department in SelectDepartment.SelectedItems
+                        Or(IsEmpty(SelectDepartment.SelectedItems), IsBlank(SelectDepartment.SelectedItems)), true, Department in SelectDepartment.SelectedItems
                     ),
                     If(
-                        IsEmpty(SelectPosition.SelectedItems), true, Position in SelectPosition.SelectedItems
+                        Or(IsEmpty(SelectPosition.SelectedItems), IsBlank(SelectPosition.SelectedItems)), true, Position in SelectPosition.SelectedItems
                     )
                 ),
                  "field_7", If(StartDateSort = "down",  SortOrder.Descending, SortOrder.Ascending)
@@ -231,31 +231,44 @@
             ZIndex: =11
 
     ButtonCanvas1 As Button:
+        Appearance: ='ButtonCanvas.Appearance'.Secondary
         DisplayMode: =DisplayMode.Edit
         Height: =44
         Text: ="Settings"
         Width: =153
         X: =11
-        Y: =406
+        Y: =451
         ZIndex: =22
 
     ButtonCanvas1_1 As Button:
+        Appearance: ='ButtonCanvas.Appearance'.Secondary
         DisplayMode: =DisplayMode.Edit
         Height: =49
+        OnSelect: =Navigate('Dasboard', ScreenTransition.Fade)
         Text: ="Dashboard"
         Width: =153
         X: =11
-        Y: =339
+        Y: =384
         ZIndex: =23
 
     ButtonCanvas1_3 As Button:
+        Appearance: ='ButtonCanvas.Appearance'.Secondary
         DisplayMode: =DisplayMode.Edit
         Height: =49
         Text: ="Admin Panel"
         Width: =153
         X: =11
-        Y: =463
+        Y: =508
         ZIndex: =24
+
+    ButtonCanvas1_2 As Button:
+        DisplayMode: =DisplayMode.Edit
+        Height: =49
+        Text: ="Employees"
+        Width: =153
+        X: =11
+        Y: =324
+        ZIndex: =25
 
     Headers As group:
         Height: =5
