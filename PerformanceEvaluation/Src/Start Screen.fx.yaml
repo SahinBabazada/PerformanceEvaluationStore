@@ -94,8 +94,8 @@
             Size: =10.5
             Text: |
                 =ThisItem.Employee
-            Width: =140
-            X: =61
+            Width: =130
+            X: =75
             ZIndex: =2
 
         ProjectCode As label:
@@ -216,7 +216,7 @@
             OnSelect: =Select(Parent)
             PressedFill: =RGBA(122, 171, 159, 1)
             Width: =1.5
-            X: =55
+            X: =65
             ZIndex: =10
 
         Go As Button:
@@ -244,7 +244,7 @@
         Appearance: ='ButtonCanvas.Appearance'.Secondary
         DisplayMode: =DisplayMode.Edit
         Height: =49
-        OnSelect: =Navigate('Dasboard', ScreenTransition.Fade)
+        OnSelect: =Navigate(Dasboard, ScreenTransition.Fade)
         Text: ="Dashboard"
         Width: =153
         X: =11
